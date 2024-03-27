@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
         image = findViewById(R.id.image);
         nationality=findViewById(R.id.nationality);
 
-        spinner.setAdapter(new MyOwnArrayAdapter<>(this,R.layout.custom_spinner_item, Nation.values()));
+        spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item,Nation.values()));
+//        spinner.setAdapter(new MyOwnArrayAdapter<>(this,R.layout.custom_spinner_item, Nation.values()));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
