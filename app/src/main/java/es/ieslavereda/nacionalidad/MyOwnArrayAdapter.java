@@ -37,7 +37,7 @@ public class MyOwnArrayAdapter<T extends Listable> extends ArrayAdapter<T> {
         ImageView flag = listItems.findViewById(R.id.flag);
 
         nation.setText(item.getDescription());
-        flag.setImageResource(item.getDrawableSimbol());
+        flag.setImageResource(item.getDrawableSymbol());
 
         return listItems;
     }

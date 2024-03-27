@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
         image = findViewById(R.id.image);
         nationality=findViewById(R.id.nationality);
 
-        spinner.setAdapter(new MyOwnArrayAdapter<>(this,R.layout.custom_spinner_item,Nacion.values()));
+        spinner.setAdapter(new MyOwnArrayAdapter<>(this,R.layout.custom_spinner_item, Nation.values()));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 image.setImageResource(((Listable)parent.getSelectedItem()).getDrawableImage());
-                icon.setImageResource(((Listable) parent.getSelectedItem()).getDrawableSimbol());
+                icon.setImageResource(((Listable) parent.getSelectedItem()).getDrawableSymbol());
                 nationality.setText(((Listable) parent.getSelectedItem()).getDescription());
 
             }
